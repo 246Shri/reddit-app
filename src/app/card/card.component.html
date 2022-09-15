@@ -1,0 +1,15 @@
+<div class="card" *ngFor="let data of redditAPI, let i = index">
+<a  href="{{'https://reddit.com/'+data.data.permalink}}"
+style="cursor: pointer;" class=" clearfix" [href]="">
+<img [src]="data.data.thumbnail" alt="{{data.data.title}}" class="card-img-top">
+    <div class="card-body">
+        <h3 class="card-title">{{data.data.title}}</h3>
+        <p class="card-text">Author: <i>{{data.data.author}}</i></p>
+        <span>No: {{i+1}}</span>
+    </div>
+    <span class="pull-right">
+        
+    </span>
+</a>
+<hr>
+</div>

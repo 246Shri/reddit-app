@@ -1,0 +1,11 @@
+<a *ngFor="let data of redditAPI, let i = index" href="{{'https://reddit.com/'+data.data.permalink}}"
+style="cursor: pointer;" class="list-group-item clearfix" [href]="">
+    <div class="pull-left">
+        <h3 class="list-group-tiem-heading">{{data.data.title}}</h3>
+        <p class="list-group-item-text">Author: <i>{{data.data.author}}</i></p>
+        <span>No: {{i+1}}</span>
+    </div>
+    <span class="pull-right">
+        <img [src]="data.data.thumbnail" alt="{{data.data.title}}" class="img-responsive" style="max-height: 70px">
+    </span>
+</a>
